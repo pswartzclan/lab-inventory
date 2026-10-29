@@ -14,3 +14,10 @@ all:
         rlch-node1: {ansible_host: 10.10.0.131}
         rlch-2: {ansible_host: 10.10.0.132}
         rlch-3: {ansible_host: 10.10.0.133}
+    hardened:
+      vars:
+        ansible_user: tux
+        ansible_become: true
+        ansible_become_method: sudo
+      hosts:
+        hard-stig: {ansible_host: 10.10.0.134}
